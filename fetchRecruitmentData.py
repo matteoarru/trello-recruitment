@@ -34,3 +34,5 @@ print(recruitment.name)
 all_lists = recruitment.all_lists()
 for list_id in all_lists:
     print(list_id)
+    for card in list_id.list_cards():
+        print(card.name)
