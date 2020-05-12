@@ -33,6 +33,8 @@ for  board in all_boards:
 print(recruitment.name)
 all_lists = recruitment.all_lists()
 for list_id in all_lists:
-    print(list_id)
+    print("Swimlane: "+list_id.name)
     for card in list_id.list_cards():
-        print(card.name)
+        print("card: "+card.name)
+        for label in card.labels:
+            print ("label: "+label.name)
