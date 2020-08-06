@@ -32,9 +32,13 @@ for  board in all_boards:
         recruitment=board
 print(recruitment.name)
 all_lists = recruitment.all_lists()
+
+def showLabel():
+    for label in card.labels:
+        print ("label: "+label.name)
+
 for list_id in all_lists:
     print("Swimlane: "+list_id.name)
     for card in list_id.list_cards():
         print("card: "+card.name)
-        for label in card.labels:
-            print ("label: "+label.name)
+        showLabel()
